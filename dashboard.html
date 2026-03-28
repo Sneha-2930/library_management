@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body style="text-align:center; background:#1e3a8a; color:white; font-family:Arial;">
+
+<h2>Library Dashboard</h2>
+
+<p id="welcome"></p>
+
+<button onclick="window.location.href='issue.html'">Issue Book</button>
+<br><br>
+<button onclick="window.location.href='return.html'">Return Book</button>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+if(name){
+    document.getElementById("welcome").innerText = "Welcome " + name;
+}
+</script>
+
+</body>
+</html>
